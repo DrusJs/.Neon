@@ -40,6 +40,30 @@
     src: url("../fonts/Photogenic.otf");
 }
 
+@font-face {
+    font-family: "Alexa";
+    font-weight: 400;
+    src: url("../fonts/Alexa.ttf");
+}
+
+@font-face {
+    font-family: "Barcelona";
+    font-weight: 400;
+    src: url("../fonts/Barcelona.otf");
+}
+
+@font-face {
+    font-family: "Amsterdam";
+    font-weight: 400;
+    src: url("../fonts/Amsterdam.ttf");
+}
+
+@font-face {
+    font-family: "Vintage";
+    font-weight: 400;
+    src: url("../fonts/Vintage.otf");
+}
+
 /* * {
 
 } */
@@ -267,10 +291,36 @@ img {
 
 }
 
+.background-selector {
+    width: fit-content;
+    display: flex;
+    gap: 10px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 5px;
+    padding: 5px;
+    background-color: rgba(33, 33, 33, .6);
+}
+
+.background-item {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    cursor: pointer;
+    overflow: hidden;
+}
+.background-item img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
 .neon-settings-group {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 10px 10px;
+    width: 100%;
 }
 
 .neon-settings-item input {
@@ -389,6 +439,10 @@ img {
     border-radius: 10px;
 }
 
+.font-select {
+    width: 100%;
+}
+
 .font-select-head {
     width: 200px;
     height: 45px;
@@ -399,7 +453,8 @@ img {
     align-items: center;
     justify-content: space-between;
     color: var(--color-black);
-    font-size: 40px;
+    font-size: 34px;
+    cursor: pointer;
 }
 
 .font-select-head::after {
@@ -415,6 +470,32 @@ img {
 
 .font-select-dropdown {
     display: none;
+    gap: 10px;
+    width: 100%;
+    margin-top: 16px;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.font-select.active .font-select-dropdown {
+    display: grid;
+}
+
+.font-select.active .font-select-head::after {
+    transform: rotate(180deg);
+}
+
+.select-dropdown-item {
+    width: 100%;
+    height: 60px;
+    border-radius: 10px;
+    background-color: var(--color-white);
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--color-black);
+    font-size: 40px;
 }
 
 .color-button {

@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     })
 
-
+    const neonWrapper = document.querySelector('.neon-wrapper')
     const dragNeonText = document.querySelector('.neon-signboard')
     let shadowColor = '#4A00E9'
 
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
       };
 
       function setShadow(color = '') {
-        let shadow = color?`${color} 0px 0px 2px, ${color} 0px 0px 5px, ${color} 0px 0px 10px, ${color} 0px 0px 20px, ${color} 0px 0px 30px, ${color} 0px 0px 40px, ${color} 0px 0px 55px, ${color} 0px 0px 65px, ${color} 0px 0px 75px, ${color} 0px 0px 95px, ${color} 0px 0px 120px`:`none`        
+        let shadow = color?`${color} 0px 0px 40px, ${color} 0px 0px 55px`:`none`        
         
         dragNeonText.style.textShadow = shadow
       }
@@ -76,4 +76,27 @@ document.addEventListener('DOMContentLoaded', () => {
         })
       })
 
+      const backgroundSwitcher = document.querySelectorAll('.background-item')
+
+      backgroundSwitcher.forEach(el=>{
+        el.addEventListener('click', (e)=>{
+            neonWrapper.style.backgroundImage = `url(${e.currentTarget.firstElementChild.src})`
+        })
+      })
+
+      const fontSelector = document.querySelectorAll('.select-dropdown-item')
+      const selectHead = document.querySelector('.font-select-head span')
+
+      fontSelector.forEach(el=>{
+        el.addEventListener('click', (e)=>{
+            selectHead.innerHTML = e.currentTarget.innerHTML
+            selectHead.style.fontFamily = e.currentTarget.innerHTML
+            dragNeonText.style.fontFamily = e.currentTarget.innerHTML
+        })
+      })
+
+      selectHead.parentElement.addEventListener('click', (e)=>{
+        console.log(1)
+        e.currentTarget.closest('.font-select').classList.toggle('active')
+    })
 });
