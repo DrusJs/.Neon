@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="MaketBro">
+    <meta property="og:description" content="MaketBro">
+    <meta property="og:image" content="img/logo.png">
+    <meta property="twitter:image" content="img/logo.png">
+    <meta name="description" content="MaketBro">   
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>LA BOUTIQUE DU NEON</title>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <img src="img/logo.png" alt="Logo" class="logo" width="150" height="59.6px">
+            <div class="header-item">
+                <nav>
+                    <ul class="navigation">
+                        <li class="navigation-item text-large fw-semibold upcase">
+                            par collection
+                        </li>
+                        <li class="navigation-item text-large fw-semibold upcase">
+                            par COULEUR
+                        </li>
+                    </ul>
+                </nav>
+                <button class="search-button">
+                    <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16.7875 17.9014C16.6375 17.8252 15.4258 16.6705 14.0948 15.3353L11.6747 12.9078L11.0842 13.2967C8.82627 14.7835 5.68221 14.7683 3.39736 13.2595C-0.00872231 11.0104 -0.949709 6.59897 1.25476 3.21488C1.61546 2.66116 2.47059 1.74473 3.02937 1.31305C3.50724 0.943874 4.45712 0.485685 5.23821 0.247583C5.95124 0.0302261 6.19913 0 7.26868 0C8.33823 0 8.58612 0.0302261 9.29915 0.247583C10.0802 0.485685 11.0301 0.943874 11.508 1.31305C12.0405 1.72443 12.9072 2.65306 13.2681 3.19894C14.7888 5.49879 14.8672 8.50132 13.4677 10.844C13.2596 11.1924 13.0744 11.5123 13.0561 11.5549C13.0378 11.5976 14.1216 12.7375 15.4647 14.0882C16.8077 15.4389 17.9513 16.663 18.006 16.8085C18.2884 17.5604 17.5029 18.265 16.7875 17.9014ZM8.46773 12.4751C9.49989 12.2558 10.196 11.8555 11.0591 10.9848C11.6195 10.4195 11.9074 10.0424 12.127 9.58639C12.8592 8.06597 12.8586 6.26524 12.1255 4.75629C11.7453 3.97373 10.5185 2.71784 9.79551 2.37103C8.75707 1.87292 8.46416 1.80761 7.2687 1.80761C6.07324 1.80761 5.78033 1.87292 4.74189 2.37103C4.01887 2.71784 2.79207 3.97373 2.41188 4.75629C1.67878 6.26524 1.67821 8.06597 2.41037 9.58639C2.8271 10.4518 4.00824 11.6439 4.85474 12.0535C5.95184 12.5844 7.24376 12.7351 8.46773 12.4751Z" fill="white"/>
+                    </svg>                        
+                </button>
+            </div>
+            <div class="header-item">
+                <div class="balance">
+                    <span class="value">0.00</span>
+                    <span class="currency">€</span>
+                </div>
+                <button class="cart-button">
+                    <img src="img/cart.svg" alt="cart buttond">
+                    <div class="counter">10</div>
+                </button>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <div class="container container--full">
+            <div class="neon-wrapper" style="background-image: url('img/background.png');">
+                <div class="neon-action">
+                    <div class="neon-switcher active">
+                        <span>on</span>
+                        <span>off</span>
+                    </div>
+                    <div class="absolute-total-price js-total-price">
+                        <span>59.99</span>€
+                    </div>
+                    <div class="neon-signboard" style="top: 150px;left: 250px;font-size: 96px;font-family: 'Photogenic';-webkit-text-stroke: 0.6px var(--color-blue);text-shadow: #4A00E9 0px 0px 2px, #4A00E9 0px 0px 5px, #4A00E9 0px 0px 10px, #4A00E9 0px 0px 20px, #4A00E9 0px 0px 30px, #4A00E9 0px 0px 40px, #4A00E9 0px 0px 55px, #4A00E9 0px 0px 65px, #4A00E9 0px 0px 75px, #4A00E9 0px 0px 95px, #4A00E9 0px 0px 120px;">
+                        <div class="neon-signboard-text"  data-main-text>Ton Texte</div>
+                        <div class="size-indicator right" data-height-indicator>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div class="size-indicator bottom" data-width-indicator>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="background-selector">
+                        <div class="background-item" data-bg=""></div>
+                    </div>
+                </div>
+                <div class="neon-settings">
+                    <div class="neon-settings__title">SAISISSEZ VOTRE TEXTE</div>
+                    <div class="neon-settings-item">
+                        <input type="text" name="main-text" id="main-text" placeholder="TON TEXTE">
+                        <div class="quote-item">
+                            <p class="quote-text"><b>J'ai un logo ou une image</b></p>
+                            <button class="primary-button">obtenir un devis</button>
+                        </div>
+                    </div>
+
+                    <div class="neon-settings__title">CHOISISSEZ LA POLICE</div>
+                    <div class="neon-settings-group">
+                        <div class="font-select">
+                            <div class="font-select-head">
+                                <span style="font-family: 'Photogenic';">Photogenic</span>
+                            </div>
+                            <div class="font-select-dropdown">
+                                <div class="select-dropdown-item" style="font-family: 'Photogenic';">Photogenic</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="neon-settings__title">CHOISISSEZ UNE COULEUR</div>
+                    <div class="neon-settings-group color-group js-settings-group">
+                        <div class="color-button" style="background-color: #FFFDCF;"></div>
+                        <div class="color-button" style="background-color: #E1E3E6;"></div>
+                        <div class="color-button" style="background-color: #FFF97C;"></div>
+                        <div class="color-button active" style="background-color: #FFD62E;"></div>
+                        <div class="color-button" style="background-color: #FF8D02;"></div>
+                        <div class="color-button" style="background-color: #FF7575;"></div>
+                        <div class="color-button" style="background-color: #FF2A4D;"></div>
+                        <div class="color-button" style="background-color: #FF90FF;"></div>
+                        <div class="color-button" style="background-color: #EAA4FF;"></div>
+
+                        <div class="color-button" style="background-color: #FF5CE8;"></div>
+                        <div class="color-button" style="background-color: #8C59FF;"></div>
+                        <div class="color-button" style="background-color: #0274FC;"></div>
+                        <div class="color-button" style="background-color: #63AAFF;"></div>
+                        <div class="color-button" style="background-color: #90DCFF;"></div>
+                        <div class="color-button" style="background-color: #24B7DE;"></div>
+                        <div class="color-button" style="background-color: #80FFD9;"></div>
+                        <div class="color-button" style="background-color: #85FFAA;"></div>
+                        <div class="color-button" style="background-color: #0BD748;"></div>
+                    </div>
+
+                    <div class="neon-settings__title">CHOISISSEZ UNE TAILLE</div>
+                    <div class="neon-settings-group js-settings-group">
+                        <div class="type-button active">
+                            <div class="desc">
+                                <span>petit (s)</span>
+                                <span>hauteur: 50cm</span>
+                            </div>
+                            <div class="price">99.99€</div>
+                        </div>
+                        <div class="type-button">
+                            <div class="desc">
+                                <span>moyen (m)</span>
+                                <span>hauteur: 70cm</span>
+                            </div>
+                            <div class="price">129.99€</div>
+                        </div>
+                        <div class="type-button">
+                            <div class="desc">
+                                <span>Grand (l)</span>
+                                <span>hauteur: 100cm</span>
+                            </div>
+                            <div class="price">199.99€</div>
+                        </div>
+                        <div class="type-button">
+                            <div class="desc">
+                                <span>tres grand (xl)</span>
+                                <span>hauteur: 130cm</span>
+                            </div>
+                            <div class="price">249.99€</div>
+                        </div>
+                    </div>
+
+                    <div class="neon-settings__title">Intérieur ou extérieur </div>
+                    <div class="neon-settings-group js-settings-group">
+                        <div class="type-button center active">Intérieur</div>
+                        <div class="type-button">
+                            <div class="desc">
+                                <span>Extérieur</span>
+                                <span>waterproof</span>
+                            </div>
+                            <div class="price">+40€</div>
+                        </div>
+                    </div>
+
+                    <div class="neon-settings__title">Support du néon</div>
+                    <div class="neon-settings-group js-settings-group">
+                        <div class="style-button active">
+                            <div class="row">
+                                <span>Couper Autour</span>
+                                <span>inclus</span>
+                            </div>
+                            <img src="img/backboard1.png" alt="" width="132">
+                        </div>
+                        <div class="style-button">
+                            <div class="row">
+                                <span>Rectangle</span>
+                                <span>inclus</span>
+                            </div>
+                            <img src="img/backboard2.png" alt="" width="132">
+                        </div>
+                        <div class="style-button">
+                            <div class="row">
+                                <span>Coupe à la Lettre</span>
+                                <span>+24€</span>
+                            </div>
+                            <img src="img/backboard3.svg" alt="">
+                        </div>
+                        <div class="style-button">
+                            <div class="row">
+                                <span>Néon Nu</span>
+                                <span>+40€</span>
+                            </div>
+                            <img src="img/backboard4.png" alt="" width="132">
+                        </div>
+                    </div>
+
+                    <div class="price-row">
+                        <p class="text-large">Votre prix final avec les options </p>
+                        <div class="neon-settings-total-price js-total-price">
+                            TOTAL <span>140</span>€
+                        </div>
+                    </div>
+                    <button class="primary-button">Ajouter au panier</button>
+                </div>
+            </div>
+        </div>
+        <div class="color-section">
+            <div class="container container--small">
+                <div class="about-row">
+                    <div class="about-row-item">
+                        <img src="img/row-about1.png" alt="Livraison">
+                        <p class="neon-desc">Livraison gratuite<br>en 3-7 jours</p>
+                    </div>
+                    <div class="about-row-item">
+                        <img src="img/row-about2.png" alt="Sécurisé">
+                        <p class="neon-desc">Paiement sécurisé<br>
+                            4x sans frais</p>
+                    </div>
+                    <div class="about-row-item">
+                        <img src="img/row-about3.png" alt="Satisfait">
+                        <p class="neon-desc">Satisfait ou remboursé<br>
+                            Garantie 2 ans</p>
+                    </div>
+                    <div class="about-row-item">
+                        <img src="img/row-about4.png" alt="Boutique française">
+                        <p class="neon-desc">Boutique française,<br>
+                            à Aix-en-Provence</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
