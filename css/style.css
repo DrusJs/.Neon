@@ -37,7 +37,7 @@
 @font-face {
     font-family: "Photogenic";
     font-weight: 400;
-    src: url("../fonts/Photogenic.otf");
+    src: url("../fonts/Photogenic.ttf");
 }
 
 @font-face {
@@ -49,7 +49,13 @@
 @font-face {
     font-family: "Barcelona";
     font-weight: 400;
-    src: url("../fonts/Barcelona.otf");
+    src: url("../fonts/Barcelona.ttf");
+}
+
+@font-face {
+    font-family: "Bayview";
+    font-weight: 400;
+    src: url("../fonts/Bayview.ttf");
 }
 
 @font-face {
@@ -59,10 +65,215 @@
 }
 
 @font-face {
+    font-family: "Greenworld";
+    font-weight: 400;
+    src: url("../fonts/Greenworld.ttf");
+}
+
+@font-face {
+    font-family: "NewCursive";
+    font-weight: 400;
+    src: url("../fonts/NewCursive.ttf");
+}
+
+@font-face {
     font-family: "Vintage";
     font-weight: 400;
-    src: url("../fonts/Vintage.otf");
+    src: url("../fonts/Vintage.ttf");
 }
+
+@font-face {
+    font-family: "Venetian";
+    font-weight: 400;
+    src: url("../fonts/Venetian.ttf");
+}
+
+@font-face {
+    font-family: "Amanda";
+    font-weight: 400;
+    src: url("../fonts/Amanda.ttf");
+}
+
+@font-face {
+    font-family: "Austin";
+    font-weight: 400;
+    src: url("../fonts/Austin.ttf");
+}
+
+@font-face {
+    font-family: "Beachfront";
+    font-weight: 400;
+    src: url("../fonts/Beachfront.ttf");
+}
+
+@font-face {
+    font-family: "Chelsea";
+    font-weight: 400;
+    src: url("../fonts/Chelsea.ttf");
+}
+
+@font-face {
+    font-family: "Freehand";
+    font-weight: 400;
+    src: url("../fonts/Freehand.ttf");
+}
+
+@font-face {
+    font-family: "Freespirit";
+    font-weight: 400;
+    src: url("../fonts/Freespirit.ttf");
+}
+
+@font-face {
+    font-family: "LoveNote";
+    font-weight: 400;
+    src: url("../fonts/LoveNote.ttf");
+}
+
+@font-face {
+    font-family: "Neonscript";
+    font-weight: 400;
+    src: url("../fonts/Neonscript.ttf");
+}
+
+@font-face {
+    font-family: "Northshore";
+    font-weight: 400;
+    src: url("../fonts/Northshore.ttf");
+}
+
+@font-face {
+    font-family: "Royalty";
+    font-weight: 400;
+    src: url("../fonts/Royalty.ttf");
+}
+
+@font-face {
+    font-family: "Rocket";
+    font-weight: 400;
+    src: url("../fonts/Rocket.ttf");
+}
+
+@font-face {
+    font-family: "Signature";
+    font-weight: 400;
+    src: url("../fonts/Signature.ttf");
+}
+
+@font-face {
+    font-family: "Sorrento";
+    font-weight: 400;
+    src: url("../fonts/Sorrento.ttf");
+}
+
+@font-face {
+    font-family: "WildScript";
+    font-weight: 400;
+    src: url("../fonts/WildScript.ttf");
+}
+
+@font-face {
+    font-family: "Avante";
+    font-weight: 400;
+    src: url("../fonts/Avante.ttf");
+}
+
+@font-face {
+    font-family: "Buttercup";
+    font-weight: 400;
+    src: url("../fonts/Buttercup.ttf");
+}
+
+@font-face {
+    font-family: "ClassicType";
+    font-weight: 400;
+    src: url("../fonts/ClassicType.ttf");
+}
+
+@font-face {
+    font-family: "Typewriter";
+    font-weight: 400;
+    src: url("../fonts/Typewriter.ttf");
+}
+
+@font-face {
+    font-family: "Melbourne";
+    font-weight: 400;
+    src: url("../fonts/Melbourne.ttf");
+}
+
+@font-face {
+    font-family: "NeoTokyo";
+    font-weight: 400;
+    src: url("../fonts/NeoTokyo.ttf");
+}
+
+@font-face {
+    font-family: "Monaco";
+    font-weight: 400;
+    src: url("../fonts/Monaco.ttf");
+}
+
+@font-face {
+    font-family: "Waikiki";
+    font-weight: 400;
+    src: url("../fonts/Waikiki.ttf");
+}
+
+@font-face {
+    font-family: "Bellview";
+    font-weight: 400;
+    src: url("../fonts/Bellview.ttf");
+}
+
+@font-face {
+    font-family: "Loveneon";
+    font-weight: 400;
+    src: url("../fonts/Loveneon.ttf");
+}
+
+@font-face {
+    font-family: "Marquee";
+    font-weight: 400;
+    src: url("../fonts/Marquee.ttf");
+}
+
+@font-face {
+    font-family: "Mayfair";
+    font-weight: 400;
+    src: url("../fonts/Mayfair.ttf");
+}
+
+@font-face {
+    font-family: "NeonGlow";
+    font-weight: 400;
+    src: url("../fonts/NeonGlow.ttf");
+}
+
+@font-face {
+    font-family: "NeonLite";
+    font-weight: 400;
+    src: url("../fonts/NeonLite.ttf");
+}
+
+@font-face {
+    font-family: "Neontrace";
+    font-weight: 400;
+    src: url("../fonts/Neontrace.ttf");
+}
+
+@font-face {
+    font-family: "Nevada";
+    font-weight: 400;
+    src: url("../fonts/Nevada.ttf");
+}
+
+@font-face {
+    font-family: "SciFi";
+    font-weight: 400;
+    src: url("../fonts/SciFi.ttf");
+}
+
 
 /* * {
 
