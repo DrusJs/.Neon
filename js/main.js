@@ -116,4 +116,12 @@ document.addEventListener('DOMContentLoaded', () => {
       selectHead.parentElement.addEventListener('click', (e)=>{
         e.currentTarget.closest('.font-select').classList.toggle('active')
     })
+
+      const heightSwitcher = document.querySelectorAll('[data-height]')
+
+      heightSwitcher.forEach(el=>{
+        el.addEventListener('click', (e)=>{
+          heightSize.firstElementChild.innerHTML = e.currentTarget.dataset.height
+        })
+      })
 });
