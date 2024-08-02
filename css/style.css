@@ -469,7 +469,82 @@ img {
     user-select: none;
     white-space: nowrap;
     transition: text-shadow 600ms ease;
+    display: grid;
+    grid-template-columns: 1fr 10px;
+    gap: 10px 20px;
 }
+
+.neon-signboard-text {
+    line-height: 1;
+}
+
+.size-indicator {
+    display: none;
+    align-items: center;
+    gap: 10px;
+}
+
+.neon-signboard.sizes .size-indicator {
+    display: flex;
+}
+
+.size-indicator.right {
+    flex-direction: column;
+    gap: 0px;
+}
+
+.size-indicator .arrow:first-child,
+.size-indicator .arrow:last-child {
+    background-color: #B5BBC1;
+    position: relative;
+    width: 100%;
+    height: 1px;
+    border-radius: 2px;
+    position: relative;
+}
+
+.size-indicator .arrow:first-child::after,
+.size-indicator .arrow:last-child::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 13px;
+    height: 7px;
+    top: -3px;
+    left: -2px;
+    background-repeat: no-repeat;
+    background-image: url(../img/arr-left.svg);
+    background-size: cover;
+}
+
+.size-indicator .arrow:last-child {
+    transform: rotate(180deg);
+}
+
+.size-indicator.right .arrow:first-child,
+.size-indicator.right .arrow:last-child {
+    background-color: #B5BBC1;
+    position: relative;
+    width: 1px;
+    height: 100%;
+    border-radius: 2px;
+    position: relative;
+}
+
+.size-indicator.right .arrow:first-child::after,
+.size-indicator.right .arrow:last-child::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 7px;
+    height: 13px;
+    top: -2px;
+    left: -3px;
+    background-repeat: no-repeat;
+    background-image: url(../img/arr-top.svg);
+    background-size: cover;
+}
+
 
 
 .neon-settings__title {
@@ -659,13 +734,19 @@ img {
     height: 45px;
     border-radius: 10px;
     background-color: var(--color-white);
-    padding: 10px 10px 10px 30px;
+    padding: 10px 10px 10px 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     color: var(--color-black);
     font-size: 34px;
     cursor: pointer;
+}
+
+.font-select-head span {
+    display: block;
+    width: 100%;
+    text-align: center;
 }
 
 .font-select-head::after {
@@ -684,7 +765,7 @@ img {
     gap: 10px;
     width: 100%;
     margin-top: 16px;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
 }
 
 .font-select.active .font-select-dropdown {
@@ -697,7 +778,7 @@ img {
 
 .select-dropdown-item {
     width: 100%;
-    height: 60px;
+    height: 70px;
     border-radius: 10px;
     background-color: var(--color-white);
     padding: 5px;
@@ -706,7 +787,7 @@ img {
     justify-content: center;
     text-align: center;
     color: var(--color-black);
-    font-size: 40px;
+    font-size: 30px;
 }
 
 .color-button {

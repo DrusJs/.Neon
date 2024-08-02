@@ -38,16 +38,21 @@ document.addEventListener('DOMContentLoaded', () => {
       function setShadow(color = '') {
         let shadow = color?`${color} 0px 0px 40px, ${color} 0px 0px 55px`:`none`        
         
-        dragNeonText.style.textShadow = shadow
+        dragNeonText.firstElementChild.style.textShadow = shadow
       }
 
       const mainInput = document.getElementById('main-text')
+      const widthSize = document.querySelector('.size-indicator.bottom .size')
+      const heightSize = document.querySelector('.size-indicator.right .size')
 
       mainInput.addEventListener('input', (e)=>{
-        console.log(e.currentTarget.value)
         dragNeonText.firstElementChild.innerHTML = e.target.value
+        widthSize.firstElementChild.innerHTML = e.target.value.length*2
         if (e.currentTarget.value == "") {
             dragNeonText.firstElementChild.innerHTML = 'Ton Texte'
+            dragNeonText.classList.remove('sizes')
+        } else {
+            dragNeonText.classList.add('sizes')          
         }
       })
 
@@ -91,12 +96,13 @@ document.addEventListener('DOMContentLoaded', () => {
         el.addEventListener('click', (e)=>{
             selectHead.innerHTML = e.currentTarget.innerHTML
             selectHead.style.fontFamily = e.currentTarget.innerHTML
-            dragNeonText.style.fontFamily = e.currentTarget.innerHTML
+            selectHead.style.fontSize = Math.floor(+e.currentTarget.dataset.desk/2.5) + 'px'
+            dragNeonText.firstElementChild.style.fontFamily = e.currentTarget.innerHTML
+            dragNeonText.firstElementChild.style.fontSize = e.currentTarget.dataset.desk + 'px'
         })
       })
 
       selectHead.parentElement.addEventListener('click', (e)=>{
-        console.log(1)
         e.currentTarget.closest('.font-select').classList.toggle('active')
     })
 });
