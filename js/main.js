@@ -41,16 +41,27 @@ document.addEventListener('DOMContentLoaded', () => {
         dragNeonText.firstElementChild.style.textShadow = shadow
       }
 
+      function setLetterTotalPrice(size) {
+        totlePrices.forEach(price=>{
+          price.firstElementChild.innerHTML = 3.25 * size
+        })
+      }
+
       const mainInput = document.getElementById('main-text')
       const widthSize = document.querySelector('.size-indicator.bottom .size')
       const heightSize = document.querySelector('.size-indicator.right .size')
+      const totlePrices = document.querySelectorAll('.js-total-price')
 
       mainInput.addEventListener('input', (e)=>{
         dragNeonText.firstElementChild.innerHTML = e.target.value
         widthSize.firstElementChild.innerHTML = e.target.value.length*2
+        setLetterTotalPrice(e.target.value.length)
         if (e.currentTarget.value == "") {
             dragNeonText.firstElementChild.innerHTML = 'Ton Texte'
             dragNeonText.classList.remove('sizes')
+            totlePrices.forEach(price=>{
+              price.firstElementChild.innerHTML = '0.00'
+            })
         } else {
             dragNeonText.classList.add('sizes')          
         }
