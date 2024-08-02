@@ -386,6 +386,7 @@ img {
 }
 .navigation-item {
     margin-right: 30px;
+    font-family: var(--font-poppins);
 }
 
 .search-button,
