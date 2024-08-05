@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     })
 
     const neonWrapper = document.querySelector('.neon-wrapper')
-    const neinAction = document.querySelector('.neon-action')
+    const neonAction = document.querySelector('.neon-action')
     const dragNeonText = document.querySelector('.neon-signboard')
     const deltaX = 20
     const deltaY = 50
@@ -27,10 +27,10 @@ document.addEventListener('DOMContentLoaded', () => {
         moveAt(event.pageX, event.pageY);
       
         function moveAt(pageX, pageY) {
-            if (pageX - shiftX + dragNeonText.firstElementChild.offsetWidth < neinAction.offsetWidth && pageX - shiftX > 0) {
+            if (pageX - shiftX + dragNeonText.firstElementChild.offsetWidth < neonAction.offsetWidth && pageX - shiftX > 0) {
               dragNeonText.style.left = pageX - shiftX  + 'px';
             }
-            if (pageY - shiftY + 200 < neinAction.offsetHeight && pageY - shiftY > 40) {
+            if (pageY - shiftY + 200 < neonAction.offsetHeight && pageY - shiftY > 40) {
               dragNeonText.style.top = pageY - shiftY  + 'px';
             }
         }
@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
         dragNeonText.firstElementChild.innerHTML = e.target.value
         widthSize.firstElementChild.innerHTML = e.target.value.length*2
 
-        while (+dragNeonText.firstElementChild.offsetWidth + +dragNeonText.style.left.replace('px', '') > neinAction.offsetWidth) {
+        while (+dragNeonText.firstElementChild.offsetWidth + +dragNeonText.style.left.replace('px', '') > neonAction.offsetWidth) {
           dragNeonText.firstElementChild.style.fontSize = dragNeonText.firstElementChild.style.fontSize.replace('px', '') - 1 + 'px'
         }
 
@@ -115,7 +115,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       backgroundSwitcher.forEach(el=>{
         el.addEventListener('click', (e)=>{
-            neonWrapper.style.backgroundImage = `url(${e.currentTarget.firstElementChild.src})`
+            neonAction.style.backgroundImage = `url(${e.currentTarget.firstElementChild.src})`
         })
       })
 
@@ -130,7 +130,7 @@ document.addEventListener('DOMContentLoaded', () => {
             dragNeonText.firstElementChild.style.fontFamily = e.currentTarget.innerHTML
             dragNeonText.firstElementChild.style.fontSize = e.currentTarget.dataset.desk + 'px'
 
-            while (+dragNeonText.firstElementChild.offsetWidth + +dragNeonText.style.left.replace('px', '') > neinAction.offsetWidth) {
+            while (+dragNeonText.firstElementChild.offsetWidth + +dragNeonText.style.left.replace('px', '') > neonAction.offsetWidth) {
               dragNeonText.firstElementChild.style.fontSize = dragNeonText.firstElementChild.style.fontSize.replace('px', '') - 1 + 'px'
             }
         })
@@ -150,9 +150,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
       window.addEventListener('resize', function(event) {
         if (window.matchMedia("(min-width: 1150px)").matches) {
-          neonWrapper.style.backgroundImage = `url(img/background.png)`
+          neonAction.style.backgroundImage = `url(img/background.png)`
         } else {
-          neonWrapper.style.backgroundImage = `url(img/backgroundlandscape.jpg)`
+          neonAction.style.backgroundImage = `url(img/backgroundlandscape.jpg)`
         }
         
     }, true);

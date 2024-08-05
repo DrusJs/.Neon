@@ -438,6 +438,9 @@ img {
 .neon-action {
     width: 100%;
     position: relative;
+    background-position: bottom center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .absolute-total-price {
