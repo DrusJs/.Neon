@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
       
         document.addEventListener('mousemove', onMouseMove);
 
-        dragNeonText.onmouseup = function() {
+        document.onmouseup = function() {
             document.removeEventListener('mousemove', onMouseMove);
             dragNeonText.onmouseup = null;
           };
@@ -143,4 +143,13 @@ document.addEventListener('DOMContentLoaded', () => {
           heightSize.firstElementChild.innerHTML = e.currentTarget.dataset.height
         })
       })
+
+      window.addEventListener('resize', function(event) {
+        if (window.matchMedia("(min-width: 1150px)").matches) {
+          neonWrapper.style.backgroundImage = `url(img/background.png)`
+        } else {
+          neonWrapper.style.backgroundImage = `url(img/backgroundlandscape.jpg)`
+        }
+        
+    }, true);
 });
