@@ -27,8 +27,12 @@ document.addEventListener('DOMContentLoaded', () => {
         moveAt(event.pageX, event.pageY);
       
         function moveAt(pageX, pageY) {
-            dragNeonText.style.left = pageX - shiftX  + 'px';
-            dragNeonText.style.top = pageY - shiftY  + 'px';
+            if (pageX - shiftX + dragNeonText.firstElementChild.offsetWidth < neinAction.offsetWidth && pageX - shiftX > 0) {
+              dragNeonText.style.left = pageX - shiftX  + 'px';
+            }
+            if (pageY - shiftY + 200 < neinAction.offsetHeight && pageY - shiftY > 40) {
+              dragNeonText.style.top = pageY - shiftY  + 'px';
+            }
         }
       
         function onMouseMove(event) {
