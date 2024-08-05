@@ -1,44 +1,56 @@
 document.addEventListener('DOMContentLoaded', () => {
     const neonSwitcher = document.querySelector('.neon-switcher')
 
+
+    function hexToRgb(rgbStr) {
+        let hexArray = rgbStr.match(/\d+/g).map(Number);
+        return `rgb(${hexArray[0]>25?hexArray[0]-40:hexArray[0]}, ${hexArray[1]>25?hexArray[1]-40:hexArray[1]}, ${hexArray[2]>25?hexArray[2]-40:hexArray[2]})`
+    }
+
     neonSwitcher.addEventListener('click', (e)=>{
         e.currentTarget.classList.toggle('active')
-        if (e.currentTarget.classList.contains('active')) {
-            setShadow(shadowColor)
-        } else {
-            setShadow()
-        }
+        setShadow(shadowColor)
     })
 
     const neonWrapper = document.querySelector('.neon-wrapper')
+    const neinAction = document.querySelector('.neon-action')
     const dragNeonText = document.querySelector('.neon-signboard')
-    let shadowColor = '#4A00E9'
+    const deltaX = 20
+    const deltaY = 50
+    let shadowColor = 'rgb(140, 89, 255)'
 
     dragNeonText.onmousedown = function(event) {      
-        moveAt(event.pageX - 200, event.pageY - 200);
+        
+        let shiftX = event.clientX - dragNeonText.getBoundingClientRect().left + deltaX;
+        let shiftY = event.clientY - dragNeonText.getBoundingClientRect().top + deltaY;
+
+        moveAt(event.pageX, event.pageY);
       
         function moveAt(pageX, pageY) {
-            dragNeonText.style.left = pageX  + 'px';
-            dragNeonText.style.top = pageY  + 'px';
+            dragNeonText.style.left = pageX - shiftX  + 'px';
+            dragNeonText.style.top = pageY - shiftY  + 'px';
         }
       
         function onMouseMove(event) {
-          moveAt(event.pageX - 200, event.pageY - 200);
+          moveAt(event.pageX, event.pageY);
         }
       
         document.addEventListener('mousemove', onMouseMove);
 
-        document.onmouseup = function() {
+        dragNeonText.onmouseup = function() {
             document.removeEventListener('mousemove', onMouseMove);
             dragNeonText.onmouseup = null;
           };
       
       };
 
-      function setShadow(color = '') {
-        let shadow = color?`${color} 0px 0px 40px, ${color} 0px 0px 55px`:`none`        
+      function setShadow(color) {
+        let isShadow = neonSwitcher.classList.contains('active')
         
+        let shadow = isShadow?`rgb(255, 255, 255) 0px 0px 2px, rgb(255, 255, 255) 0px 0px 5px, rgb(255, 255, 255) 0px 0px 10px, ${color} 0px 0px 20px, ${color} 0px 0px 30px, ${color} 0px 0px 40px, ${color} 0px 0px 55px, ${color} 0px 0px 65px, ${color} 0px 0px 75px, ${color} 0px 0px 95px, ${color} 0px 0px 120px`:`${hexToRgb(color)} 0px 1px 0px, ${hexToRgb(color)} 0px 2px 0px, ${hexToRgb(color)} 0px 3px 0px, ${hexToRgb(color)} 0px 4px 0px, rgba(0, 0, 0, 0.23) 0px 0px 5px, rgba(0, 0, 0, 0.43) 0px 1px 3px, rgba(0, 0, 0, 0.4) 1px 4px 6px, rgba(0, 0, 0, 0.38) 0px 5px 10px, rgba(0, 0, 0, 0.25) 3px 7px 12px`        
+
         dragNeonText.firstElementChild.style.textShadow = shadow
+        dragNeonText.firstElementChild.style.color = isShadow?'#FFFFFF':color
       }
 
       function setLetterTotalPrice(size) {
@@ -55,6 +67,11 @@ document.addEventListener('DOMContentLoaded', () => {
       mainInput.addEventListener('input', (e)=>{
         dragNeonText.firstElementChild.innerHTML = e.target.value
         widthSize.firstElementChild.innerHTML = e.target.value.length*2
+
+        while (+dragNeonText.firstElementChild.offsetWidth + +dragNeonText.style.left.replace('px', '') > neinAction.offsetWidth) {
+          dragNeonText.firstElementChild.style.fontSize = dragNeonText.firstElementChild.style.fontSize.replace('px', '') - 1 + 'px'
+        }
+
         setLetterTotalPrice(e.target.value.length)
         if (e.currentTarget.value == "") {
             dragNeonText.firstElementChild.innerHTML = 'Ton Texte'
@@ -86,9 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
         btn.addEventListener('click', (e)=>{
             shadowColor = e.currentTarget.style.backgroundColor
 
-            if (neonSwitcher.classList.contains('active')) {
-                setShadow(shadowColor)
-            }
+            setShadow(shadowColor)
         })
       })
 
@@ -110,6 +125,10 @@ document.addEventListener('DOMContentLoaded', () => {
             selectHead.style.fontSize = Math.floor(+e.currentTarget.dataset.desk/2.5) + 'px'
             dragNeonText.firstElementChild.style.fontFamily = e.currentTarget.innerHTML
             dragNeonText.firstElementChild.style.fontSize = e.currentTarget.dataset.desk + 'px'
+
+            while (+dragNeonText.firstElementChild.offsetWidth + +dragNeonText.style.left.replace('px', '') > neinAction.offsetWidth) {
+              dragNeonText.firstElementChild.style.fontSize = dragNeonText.firstElementChild.style.fontSize.replace('px', '') - 1 + 'px'
+            }
         })
       })
 

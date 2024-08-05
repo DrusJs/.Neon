@@ -350,6 +350,9 @@ img {
 }
 .container.container--full {
     max-width: none;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 30px;
 }
 
 .text-large {
@@ -429,7 +432,7 @@ img {
     background-size: cover;
     background-repeat: no-repeat;
     padding: 20px;
-    height: calc(100dvh - 140px);
+    height: calc(100dvh - 40px);
 }
 
 .neon-action {
@@ -460,7 +463,7 @@ img {
     padding: 30px;
     border-radius: 10px;
     background-color: rgba(33, 33, 33, .6);
-    height: calc(100dvh - 180px);
+    height: calc(100dvh - 80px);
     counter-reset: section;
 }
 
@@ -476,7 +479,7 @@ img {
 
 .neon-signboard-text {
     line-height: 1;
-    transition: text-shadow 600ms ease;
+    transition: text-shadow 600ms ease, color 600ms ease;
 }
 
 .size-indicator {
@@ -769,7 +772,7 @@ img {
     gap: 10px;
     width: 100%;
     margin-top: 16px;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
 }
 
 .font-select.active .font-select-dropdown {
@@ -782,7 +785,7 @@ img {
 
 .select-dropdown-item {
     width: 100%;
-    height: 70px;
+    height: 40px;
     border-radius: 10px;
     background-color: var(--color-white);
     padding: 5px;
