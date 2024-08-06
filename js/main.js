@@ -87,7 +87,11 @@ document.addEventListener('DOMContentLoaded', () => {
             dragNeonText.classList.add('sizes')          
         }
       })
-
+      mainInput.addEventListener('keyup', (e)=>{
+        if (e.key === 'Enter' || e.keyCode === 13) {
+          dragNeonText.firstElementChild.innerHTML += '<br>'
+        }
+      })
       const settingsGroups = document.querySelectorAll('.js-settings-group')
 
       settingsGroups.forEach(group => {
