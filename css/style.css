@@ -481,6 +481,7 @@ img {
 
 .neon-signboard-text {
     line-height: 1;
+    text-align: center;
     transition: text-shadow 600ms ease, color 600ms ease;
 }
 
@@ -560,7 +561,7 @@ img {
     display: flex;
     align-items: center;
     gap: 6px;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 900;
     -webkit-text-stroke: 1px var(--color-blue);
     text-shadow: var(--text-shadow);
@@ -622,7 +623,8 @@ img {
     width: 304px;
     height: 100px;
     text-align: center;
-    padding: 30px 20px;
+    padding: 7px 20px;
+    line-height: 1;
     border: 1px solid #B9B9B9;
     resize: none;
     border-radius: 10px;
@@ -723,7 +725,7 @@ img {
     color: var(--color-white);
     font-family: var(--font-poppins);
     font-weight: 700;
-    font-size: 18px;
+    font-size: 16px;
     box-shadow: 0 0 10px var(--color-secondary);
     width: 100%;
 }
@@ -901,7 +903,7 @@ img {
     font-family: var(--font-poppins);
     justify-content: space-between;
     align-items: center;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 600;
 }
 

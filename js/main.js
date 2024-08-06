@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const totlePrices = document.querySelectorAll('.js-total-price')
 
       mainInput.addEventListener('input', (e)=>{
-        if (e.target.value == 1) {
+        if (e.target.value.length == 1 || dragNeonText.firstElementChild.innerHTML == 'Ton Texte') {
           dragNeonText.firstElementChild.innerHTML = ''
         }
 
