@@ -618,12 +618,13 @@ img {
     width: 100%;
 }
 
-.neon-settings-item input {
+.neon-settings-item textarea {
     width: 304px;
     height: 100px;
     text-align: center;
     padding: 30px 20px;
     border: 1px solid #B9B9B9;
+    resize: none;
     border-radius: 10px;
     color: #000000;
     font-family: var(--font-poppins);
@@ -632,12 +633,12 @@ img {
     margin-right: 26px;
 }
 
-.neon-settings-item input::placeholder {
+.neon-settings-item textarea::placeholder {
     color: #000000;
     opacity: 1;    
 }
 
-.neon-settings-item input:focus::placeholder {
+.neon-settings-item textarea:focus::placeholder {
     opacity: 0;
 }
 
@@ -853,12 +854,12 @@ img {
 }
 
 .style-button .row span:first-child {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 700;
 }
 
 .style-button .row span:last-child {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 700;
     text-transform: uppercase;
 }
@@ -870,7 +871,7 @@ img {
 
 .type-button.center {
     justify-content: center;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 700;
     text-transform: uppercase;
 }
@@ -883,7 +884,7 @@ img {
 
 .type-button .desc span:first-child,
 .type-button .price {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 700;
     text-transform: uppercase;
 }
@@ -971,7 +972,7 @@ img {
         flex-direction: column;
         gap: 16px;
     }
-    .neon-settings-item input {
+    .neon-settings-item textarea {
         margin-right: 0;
         height: 60px;
         padding: 10px 20px;
