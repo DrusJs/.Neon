@@ -630,7 +630,7 @@ img {
     border-radius: 10px;
     color: #000000;
     font-family: var(--font-poppins);
-    font-size: 32px;
+    font-size: 28px;
     outline: none;
     margin-right: 26px;
 }
@@ -978,7 +978,7 @@ img {
         margin-right: 0;
         height: 60px;
         padding: 10px 20px;
-        font-size: 26px;
+        font-size: 22px;
     }
     .absolute-total-price {
         font-size: 28px;
