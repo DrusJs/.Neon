@@ -69,10 +69,12 @@ document.addEventListener('DOMContentLoaded', () => {
       const totlePrices = document.querySelectorAll('.js-total-price')
 
       mainInput.addEventListener('input', (e)=>{
-        if (e.target.value.length == 1 || dragNeonText.firstElementChild.innerHTML == 'Ton Texte') {
+        if (e.target.value.length == 1) {
           dragNeonText.firstElementChild.innerHTML = ''
         }
-
+        if (dragNeonText.firstElementChild.innerHTML == 'Ton Texte') {
+          dragNeonText.firstElementChild.innerHTML = e.target.value
+        }
         if (e.data) {
           dragNeonText.firstElementChild.innerHTML += e.data
           widthSize.firstElementChild.innerHTML = e.target.value.length*2
