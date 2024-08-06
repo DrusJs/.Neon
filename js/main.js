@@ -69,8 +69,14 @@ document.addEventListener('DOMContentLoaded', () => {
       const totlePrices = document.querySelectorAll('.js-total-price')
 
       mainInput.addEventListener('input', (e)=>{
-        dragNeonText.firstElementChild.innerHTML = e.target.value
-        widthSize.firstElementChild.innerHTML = e.target.value.length*2
+        if (e.target.value == 1) {
+          dragNeonText.firstElementChild.innerHTML = ''
+        }
+
+        if (e.data) {
+          dragNeonText.firstElementChild.innerHTML += e.data
+          widthSize.firstElementChild.innerHTML = e.target.value.length*2
+        }
 
         while (+dragNeonText.firstElementChild.offsetWidth + +dragNeonText.style.left.replace('px', '') > neonAction.offsetWidth) {
           dragNeonText.firstElementChild.style.fontSize = dragNeonText.firstElementChild.style.fontSize.replace('px', '') - 1 + 'px'
