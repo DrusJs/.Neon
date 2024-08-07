@@ -960,7 +960,7 @@ img {
     }
 
     .neon-settings {
-        height: calc(50dvh - 60px);
+        height: calc(50vh - 60px);
         width: 100%;
         padding: 20px;
     }
@@ -978,10 +978,18 @@ img {
         margin-right: 0;
         height: 60px;
         padding: 10px 20px;
-        font-size: 22px;
+        font-size: 16px;
     }
     .absolute-total-price {
-        font-size: 28px;
+        font-size: 18px;
+    }
+    .neon-switcher span {
+        width: 30px;
+        height: 20px;
+        line-height: 1;
+    }
+    .neon-switcher {
+        height: 20px;
     }
     .price-row {
         flex-direction: column;
@@ -1004,6 +1012,11 @@ img {
     .style-button .row span:last-child {
         font-size: 14px;
         line-height: 1.2;
+    }
+    .neon-signboard {
+        top: 30% !important;
+        left: 50% !important;
+        transform: translateX(-50%);
     }
 }
 

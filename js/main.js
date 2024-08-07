@@ -69,16 +69,10 @@ document.addEventListener('DOMContentLoaded', () => {
       const totlePrices = document.querySelectorAll('.js-total-price')
 
       mainInput.addEventListener('input', (e)=>{
-        if (e.target.value.length == 1) {
-          dragNeonText.firstElementChild.innerHTML = ''
-        }
-        if (dragNeonText.firstElementChild.innerHTML == 'Ton Texte') {
-          dragNeonText.firstElementChild.innerHTML = e.target.value
-        }
-        if (e.data) {
-          dragNeonText.firstElementChild.innerHTML += e.data
+
+          dragNeonText.firstElementChild.innerHTML = e.target.value.replaceAll('\n', '<br>')
           widthSize.firstElementChild.innerHTML = e.target.value.length*2
-        }
+
 
         while (+dragNeonText.firstElementChild.offsetWidth + +dragNeonText.style.left.replace('px', '') > neonAction.offsetWidth) {
           dragNeonText.firstElementChild.style.fontSize = dragNeonText.firstElementChild.style.fontSize.replace('px', '') - 1 + 'px'
@@ -93,11 +87,6 @@ document.addEventListener('DOMContentLoaded', () => {
             })
         } else {
             dragNeonText.classList.add('sizes')          
-        }
-      })
-      mainInput.addEventListener('keyup', (e)=>{
-        if (e.key === 'Enter' || e.keyCode === 13) {
-          dragNeonText.firstElementChild.innerHTML += '<br>'
         }
       })
       const settingsGroups = document.querySelectorAll('.js-settings-group')
@@ -140,7 +129,11 @@ document.addEventListener('DOMContentLoaded', () => {
             selectHead.style.fontFamily = e.currentTarget.innerHTML
             selectHead.style.fontSize = Math.floor(+e.currentTarget.dataset.desk/2.5) + 'px'
             dragNeonText.firstElementChild.style.fontFamily = e.currentTarget.innerHTML
-            dragNeonText.firstElementChild.style.fontSize = e.currentTarget.dataset.desk + 'px'
+            if (window.matchMedia("(min-width: 1150px)").matches) {
+              dragNeonText.firstElementChild.style.fontSize = e.currentTarget.dataset.desk + 'px'
+            } else {
+              dragNeonText.firstElementChild.style.fontSize = e.currentTarget.dataset.desk/2 + 'px'
+            }
 
             while (+dragNeonText.firstElementChild.offsetWidth + +dragNeonText.style.left.replace('px', '') > neonAction.offsetWidth) {
               dragNeonText.firstElementChild.style.fontSize = dragNeonText.firstElementChild.style.fontSize.replace('px', '') - 1 + 'px'
@@ -168,4 +161,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         
     }, true);
+
+    if (!window.matchMedia("(min-width: 1150px)").matches) {
+      neonAction.style.backgroundImage = `url(img/backgroundlandscape.jpg)`
+      dragNeonText.firstElementChild.style.fontSize = '40px'
+    } 
 });
