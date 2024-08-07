@@ -159,6 +159,13 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
           neonAction.style.backgroundImage = `url(img/backgroundlandscape.jpg)`
         }
+        while (+dragNeonText.firstElementChild.offsetWidth + +dragNeonText.style.left.replace('px', '') + 18 > neonAction.offsetWidth) {
+          dragNeonText.style.left = dragNeonText.style.left.replace('px', '') - 1 + 'px'
+        }
+        
+        while (+dragNeonText.firstElementChild.offsetHeight + +dragNeonText.style.top.replace('px', '') + 100 > neonAction.offsetHeight) {
+          dragNeonText.style.top = dragNeonText.style.top.replace('px', '') - 1 + 'px'
+        }
         
     }, true);
 
